@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.UIElements;
 
 public class GunSystem : MonoBehaviour
 {
@@ -49,11 +50,15 @@ public class GunSystem : MonoBehaviour
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
         readyToShoot = false;
+
+        Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
+
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy))
         {
             Debug.Log(rayHit.collider.name);
    
         }
+
 
         bulletsLeft--;
         bulletsShot--;
