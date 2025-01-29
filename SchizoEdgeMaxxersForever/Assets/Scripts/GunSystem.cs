@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GunSystem : MonoBehaviour
     public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
+
+    public GameObject muzzleFlash, bulletHoleGraphic;
 
 
     void Start()
@@ -59,7 +62,8 @@ public class GunSystem : MonoBehaviour
    
         }
 
-
+        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
+        Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
         bulletsLeft--;
         bulletsShot--;
         Invoke("ResetShot", timeBetweenShooting);
