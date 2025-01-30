@@ -55,15 +55,27 @@ public class GunSystem : MonoBehaviour
         readyToShoot = false;
 
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
-
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out rayHit, range, whatIsEnemy))
+        if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range))
         {
-            Debug.Log(rayHit.collider.name);
+            if ((1 < rayHit.collider.gameObject.layer) & (whatIsEnemy) != 0)
+            {
+                Debug.Log(rayHit.collider.name);
+                if (rayHit.collider.CompareTag("Enemy"))
+                {
+
+                }
+            }
+            else
+            {
+                Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.LookRotation(rayHit.normal));
+            }
+
    
         }
 
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
-        Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        GameObject flash = Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity, attackPoint);
+        Destroy(flash, 0.1f);
         bulletsLeft--;
         bulletsShot--;
         Invoke("ResetShot", timeBetweenShooting);

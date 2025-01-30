@@ -464,7 +464,7 @@ Transform:
   m_GameObject: {fileID: 652041627}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0103, y: -0.49600002, z: 2.3979034}
+  m_LocalPosition: {x: -0.0103, y: -0.313, z: 2.3979034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -778,7 +778,7 @@ MonoBehaviour:
   range: 100
   reloadTime: 1
   timeBetweenShots: 0
-  magazineSize: 30
+  magazineSize: 100
   bulletsPerTap: 1
   allowButtonHold: 1
   fpsCam: {fileID: 963194227}
