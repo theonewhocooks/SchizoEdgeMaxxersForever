@@ -6,6 +6,10 @@ using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
+    public AudioSource audioSource;
+
+    public AudioClip gunshotAudioClip;
+
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
@@ -20,10 +24,12 @@ public class GunSystem : MonoBehaviour
     public GameObject muzzleFlash, bulletHoleGraphic;
 
 
+
     void Start()
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     private void Update(){
         MyInput();
@@ -50,6 +56,7 @@ public class GunSystem : MonoBehaviour
 
     private void Shoot()
     {
+
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
         readyToShoot = false;
@@ -75,6 +82,7 @@ public class GunSystem : MonoBehaviour
 
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         GameObject flash = Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity, attackPoint);
+        audioSource.PlayOneShot(gunshotAudioClip, 1);
         Destroy(flash, 0.1f);
         bulletsLeft--;
         bulletsShot--;

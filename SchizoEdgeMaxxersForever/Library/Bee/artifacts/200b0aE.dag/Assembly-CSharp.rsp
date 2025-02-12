@@ -365,7 +365,6 @@
 "Assets/Scripts/GunSystem.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/PlayerController.cs"
-"Assets/Scripts/ShootingAi.cs"
 "Assets/UnityTechnologies/EffectExamples/Shared/Scripts/DecalDestroyer.cs"
 "Assets/UnityTechnologies/EffectExamples/Shared/Scripts/ExtinguishableFire.cs"
 "Assets/UnityTechnologies/EffectExamples/Shared/Scripts/GunAim.cs"
