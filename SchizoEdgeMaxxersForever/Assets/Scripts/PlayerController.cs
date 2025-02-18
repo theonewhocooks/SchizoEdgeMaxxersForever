@@ -5,6 +5,11 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+	public AudioSource audioSource;
+
+    public AudioClip bonesAudioClip;
+
+	public int health;
 	public KeyCode jumpkey = KeyCode.Space;
 	public float jumpForce;
 	public float jumpCooldown;
@@ -76,5 +81,20 @@ public class PlayerController : MonoBehaviour
 	{
 		readyToJump = true;
 	}
+
+	public void ExecuteDamage()
+	{
+
+	}
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0) Invoke(nameof(DestroyPlayer), .5f);
+    }
+
+	private void DestroyPlayer()
+    {
+        Destroy(gameObject);
+    }
 
 }
