@@ -1269,9 +1269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e70a5e25f9a443ec8b67babc17ef7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   audioSource: {fileID: 966074996}
   bonesAudioClip: {fileID: 8300000, guid: d896f01681b9c43bdbe2293da4c0eaa4, type: 3}
-  health: 0
+  health: 100
   jumpkey: 32
   jumpForce: 12
   jumpCooldown: 0.25
@@ -1939,7 +1940,7 @@ GameObject:
   - component: {fileID: 2096754429}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1956,21 +1957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8311e702048544da9d9c72ac6b6b057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 2096754428}
   player: {fileID: 966074990}
-  health: 100
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
-  timeBetweenAttacks: 3
-  projectile: {fileID: 385359139969440981, guid: 3d0a90eabf60b401d9552226064deeb6, type: 3}
-  sightRange: 50
-  attackRange: 20
-  playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!136 &2096754424
 CapsuleCollider:
   m_ObjectHideFlags: 0

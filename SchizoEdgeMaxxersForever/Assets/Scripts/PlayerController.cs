@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+	private int damage = 5;
+	public GameObject enemy;
 	public AudioSource audioSource;
 
     public AudioClip bonesAudioClip;
@@ -82,11 +84,16 @@ public class PlayerController : MonoBehaviour
 		readyToJump = true;
 	}
 
-	public void ExecuteDamage()
-	{
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+		{
+			TakeDamage();
+			audioSource.PlayOneShot(bonesAudioClip, 1);
+		}
+    }
 
-	}
-    public void TakeDamage(int damage)
+    public void TakeDamage()
     {
         health -= damage;
         if (health <= 0) Invoke(nameof(DestroyPlayer), .5f);
