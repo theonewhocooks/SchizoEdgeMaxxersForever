@@ -493,6 +493,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &610686000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610686001}
+  - component: {fileID: 610686002}
+  m_Layer: 6
+  m_Name: Effect Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610686001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610686000}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.70789975, y: -0, z: -0, w: 0.7063129}
+  m_LocalPosition: {x: 0.039, y: 0.752, z: 0.549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 966074990}
+  m_LocalEulerAnglesHint: {x: -90.13, y: 0, z: 0}
+--- !u!114 &610686002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610686000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6b482468eb749cbac78db90e0223dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPosition: {fileID: 948054017}
 --- !u!1 &621004295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1250,7 @@ Transform:
   - {fileID: 1297281578}
   - {fileID: 1979513393}
   - {fileID: 948054017}
+  - {fileID: 610686001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &966074992
@@ -1269,6 +1315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e70a5e25f9a443ec8b67babc17ef7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectPoint: {fileID: 610686001}
+  bloodEffect1: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+  bloodEffect2: {fileID: 1000010675638318, guid: a3768c8a9d1b90d4bb0eb0e4bdbe730c, type: 3}
   enemy: {fileID: 0}
   audioSource: {fileID: 966074996}
   bonesAudioClip: {fileID: 8300000, guid: d896f01681b9c43bdbe2293da4c0eaa4, type: 3}

@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+	public Transform effectPoint;
+	public GameObject bloodEffect1, bloodEffect2;
 	private int damage = 5;
 	public GameObject enemy;
 	public AudioSource audioSource;
@@ -41,6 +43,8 @@ public class PlayerController : MonoBehaviour
     {
 		MyInput();
     }
+
+	
 
     private void FixedUpdate()
     {
@@ -97,6 +101,8 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
         if (health <= 0) Invoke(nameof(DestroyPlayer), .5f);
+		Instantiate(bloodEffect1, effectPoint.position, Quaternion.identity, effectPoint);
+		Instantiate(bloodEffect2, effectPoint.position, Quaternion.identity, effectPoint);
     }
 
 	private void DestroyPlayer()
