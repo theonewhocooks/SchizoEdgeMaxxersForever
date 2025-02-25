@@ -102,7 +102,6 @@ public class PlayerController : MonoBehaviour
         health -= damage;
         if (health <= 0) Invoke(nameof(DestroyPlayer), .5f);
 		Instantiate(bloodEffect1, effectPoint.position, Quaternion.identity, effectPoint);
-		Instantiate(bloodEffect2, effectPoint.position, Quaternion.identity, effectPoint);
     }
 
 	private void DestroyPlayer()

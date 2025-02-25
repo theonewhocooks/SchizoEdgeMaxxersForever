@@ -15,5 +15,6 @@ public class effectmover : MonoBehaviour
     void LateUpdate()
     {
         transform.rotation = objectPosition.rotation;
+        transform.position = objectPosition.position;
     }
 }
