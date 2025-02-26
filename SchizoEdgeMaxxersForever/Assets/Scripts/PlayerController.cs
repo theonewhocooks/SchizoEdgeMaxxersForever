@@ -101,8 +101,17 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
         if (health <= 0) Invoke(nameof(DestroyPlayer), .5f);
-		Instantiate(bloodEffect1, effectPoint.position, Quaternion.identity, effectPoint);
+		bloodEffect1.SetActive(true);
+		bloodEffect2.SetActive(true);
+		StartCoroutine(WoundEffect());
     }
+
+	public IEnumerator WoundEffect()
+	{
+		yield return new WaitForSeconds(4);
+		bloodEffect1.SetActive(false);
+		bloodEffect2.SetActive(false);
+	}
 
 	private void DestroyPlayer()
     {
