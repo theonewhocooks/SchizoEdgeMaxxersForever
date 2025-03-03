@@ -5,8 +5,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyAi : MonoBehaviour
 {
+    public int Damage;
+    public int health;
 
  public Transform player;
 
@@ -20,8 +22,19 @@ public class EnemyMovement : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
+    public void TakeDamage()
+    {
+        health -= Damage;
+        if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
+    }
 
- void Update()
+    void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
+
+
+    void Update()
     {
 
  if (player != null)

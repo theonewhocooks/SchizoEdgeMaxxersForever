@@ -954,7 +954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4765838103219372, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1053,6 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028eb341be44846ed9b69ed8a49317b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAi: {fileID: 0}
   audioSource: {fileID: 948054021}
   gunshotAudioClip: {fileID: 8300000, guid: db9af393475e348f7aadff2140bc870e, type: 3}
   damage: 20
@@ -2063,7 +2064,7 @@ GameObject:
   - component: {fileID: 2096754423}
   - component: {fileID: 2096754428}
   - component: {fileID: 2096754429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2082,6 +2083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8311e702048544da9d9c72ac6b6b057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 3
+  health: 50
   player: {fileID: 966074990}
 --- !u!136 &2096754424
 CapsuleCollider:

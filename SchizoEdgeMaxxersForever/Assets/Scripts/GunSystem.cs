@@ -6,6 +6,7 @@ using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
+    public EnemyAi enemyAi;
     public AudioSource audioSource;
 
     public AudioClip gunshotAudioClip;
@@ -69,7 +70,7 @@ public class GunSystem : MonoBehaviour
                 Debug.Log(rayHit.collider.name);
                 if (rayHit.collider.CompareTag("Enemy"))
                 {
-
+                    enemyAi.TakeDamage();
                 }
             }
             else
