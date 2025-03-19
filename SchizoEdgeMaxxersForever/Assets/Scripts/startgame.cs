@@ -30,7 +30,6 @@ public class startgame : MonoBehaviour
     {
         menu.SetActive(false);
         settings.SetActive(true);
-        closebutton.SetActive(true);
     }
 
 
@@ -38,7 +37,6 @@ public class startgame : MonoBehaviour
     {
         menu.SetActive(true);
         settings.SetActive(false);
-        closebutton.SetActive(false);
     }
     
 }
