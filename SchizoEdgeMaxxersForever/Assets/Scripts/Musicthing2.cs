@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Musicthing2 : MonoBehaviour
 {
+    public Musicthing musicthing;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,15 @@ public class Musicthing2 : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void StopMusicClick()
+    {
+        musicthing.StopMusic();
+    }
+
+    public void StartMusicClick()
+    {
+        musicthing.StartMusic();
     }
 }

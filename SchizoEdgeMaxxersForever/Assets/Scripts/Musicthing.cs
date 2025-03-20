@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Musicthing : MonoBehaviour
 {
-    public GameObject audiosource;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +16,15 @@ public class Musicthing : MonoBehaviour
         
     }
 
-    void StopMusic()
+    public void StopMusic()
     {
-        audiosource.SetActive(false);
+        gameObject.SetActive(false);
+        Debug.Log("on");
+    }
+
+    public void StartMusic()
+    {
+        gameObject.SetActive(true);
+        Debug.Log("off");
     }
 }

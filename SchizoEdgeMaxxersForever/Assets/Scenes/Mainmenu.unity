@@ -747,7 +747,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 559666405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 991063434}
+        m_TargetAssemblyTypeName: Musicthing2, Assembly-CSharp
+        m_MethodName: StartMusicClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &559666405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,7 +1040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 662746249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 991063434}
+        m_TargetAssemblyTypeName: Musicthing2, Assembly-CSharp
+        m_MethodName: StopMusicClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &662746249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1185,7 +1209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 991063431}
   - component: {fileID: 991063432}
-  - component: {fileID: 991063433}
+  - component: {fileID: 991063434}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1224,7 +1248,7 @@ MonoBehaviour:
   settings: {fileID: 2097854176}
   menu: {fileID: 1642648023}
   closebutton: {fileID: 0}
---- !u!114 &991063433
+--- !u!114 &991063434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1233,10 +1257,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 991063430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b4b4bb5d53e49d8aa92125525d4814, type: 3}
+  m_Script: {fileID: 11500000, guid: aea2f83b6ee2a4b1dbd0b7e3c9d42017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audiosource: {fileID: 0}
+  musicthing: {fileID: 0}
 --- !u!1 &1037192472
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2097854177
 MonoBehaviour:
   m_ObjectHideFlags: 0
