@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Musicthing : MonoBehaviour
 {
+    public GameObject music;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,18 +14,16 @@ public class Musicthing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            ToggleMusic();
+        }
     }
 
-    public void StopMusic()
+    void ToggleMusic()
     {
-        gameObject.SetActive(false);
-        Debug.Log("on");
-    }
-
-    public void StartMusic()
-    {
-        gameObject.SetActive(true);
-        Debug.Log("off");
+        bool currentState = music.activeSelf;
+        music.SetActive(!currentState);
+        Debug.Log(currentState);
     }
 }

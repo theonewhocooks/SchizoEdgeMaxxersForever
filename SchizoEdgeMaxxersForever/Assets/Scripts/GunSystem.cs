@@ -6,6 +6,8 @@ using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
+
+    public TextMeshProUGUI reloadText;
     public EnemyAi enemyAi;
     public AudioSource audioSource;
 
@@ -15,7 +17,7 @@ public class GunSystem : MonoBehaviour
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
-    int bulletsLeft, bulletsShot;
+    public int bulletsLeft, bulletsShot;
     bool shooting, readyToShoot, reloading;
     public Camera fpsCam;
     public Transform attackPoint;
@@ -32,8 +34,10 @@ public class GunSystem : MonoBehaviour
         readyToShoot = true;
         audioSource = gameObject.GetComponent<AudioSource>();
     }
-    private void Update(){
+    private void Update()
+    {
         MyInput();
+        reloadText.text = "Bullets: " + bulletsLeft.ToString();
     }
     private void MyInput()
     {
@@ -45,7 +49,7 @@ public class GunSystem : MonoBehaviour
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
             bulletsShot = bulletsPerTap;
-            Shoot();
+            Shoot();   
         }
     }
 
@@ -71,6 +75,7 @@ public class GunSystem : MonoBehaviour
                 if (rayHit.collider.CompareTag("Enemy"))
                 {
                     enemyAi.TakeDamage();
+                    Debug.Log("took damage");
                 }
             }
             else
