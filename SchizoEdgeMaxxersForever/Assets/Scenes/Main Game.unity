@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: d0cac5b586ffc5541841ef1580df871c, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.32586616, g: 0.32586616, b: 0.32586616, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,7 +315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502674328395743950, guid: 38497b2c75d1d45eeb9c0cdec6ee9285, type: 3}
       propertyPath: m_Name
-      value: EnemyLicker
+      value: EnemyFreak
       objectReference: {fileID: 0}
     - target: {fileID: 5959198398313062708, guid: 38497b2c75d1d45eeb9c0cdec6ee9285, type: 3}
       propertyPath: player
@@ -2169,7 +2169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2224734551951520329, guid: 6ae91ad53d916104fa32ddd08111cc2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00014049
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 2224734551951520329, guid: 6ae91ad53d916104fa32ddd08111cc2e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2177,7 +2177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2224734551951520329, guid: 6ae91ad53d916104fa32ddd08111cc2e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.805
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 2224734551951520329, guid: 6ae91ad53d916104fa32ddd08111cc2e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2560,11 +2560,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - enemyPrefab: {fileID: 8790695823218803384}
-    cost: 1
+    cost: 5
   - enemyPrefab: {fileID: 2041357}
     cost: 1
   currWave: 1
-  waveValue: 0
+  waveValue: 20
   enemiesToSpawn: []
   spawnLocation: {fileID: 719056168}
   waveDuration: 10
@@ -2685,6 +2685,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2980591814397366440, guid: 38497b2c75d1d45eeb9c0cdec6ee9285, type: 3}
+      propertyPath: m_Speed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3946368764507302702, guid: 38497b2c75d1d45eeb9c0cdec6ee9285, type: 3}
       propertyPath: m_LocalPosition.x
       value: -159.1
@@ -2727,7 +2731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502674328395743950, guid: 38497b2c75d1d45eeb9c0cdec6ee9285, type: 3}
       propertyPath: m_Name
-      value: EnemyFreak
+      value: EnemyLicker
       objectReference: {fileID: 0}
     - target: {fileID: 5959198398313062708, guid: 38497b2c75d1d45eeb9c0cdec6ee9285, type: 3}
       propertyPath: player
