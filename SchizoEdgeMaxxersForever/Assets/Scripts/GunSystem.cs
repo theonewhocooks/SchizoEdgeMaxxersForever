@@ -69,7 +69,7 @@ public class GunSystem : MonoBehaviour
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range))
         {
-            if ((1 < rayHit.collider.gameObject.layer) & (whatIsEnemy) != 0)
+            if (((1 << rayHit.collider.gameObject.layer) & whatIsEnemy) != 0)
             {
                 Debug.Log(rayHit.collider.name);
                 if (rayHit.collider.CompareTag("Enemy"))
