@@ -8,7 +8,6 @@ public class GunSystem : MonoBehaviour
 {
 
     public TextMeshProUGUI reloadText;
-    public EnemyAi enemyAi;
     public AudioSource audioSource;
 
     public AudioClip gunshotAudioClip;
@@ -74,8 +73,12 @@ public class GunSystem : MonoBehaviour
                 Debug.Log(rayHit.collider.name);
                 if (rayHit.collider.CompareTag("Enemy"))
                 {
-                    enemyAi.TakeDamage();
-                    Debug.Log("took damage");
+                    EnemyAi hitenemy = rayHit.collider.GetComponent<EnemyAi>();
+                    if (hitenemy != null)
+                    {
+                        hitenemy.TakeDamage();
+                        Debug.Log("took damage");
+                    }
                 }
             }
             else

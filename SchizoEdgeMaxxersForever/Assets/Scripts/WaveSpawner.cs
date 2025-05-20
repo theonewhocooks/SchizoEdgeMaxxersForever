@@ -27,11 +27,13 @@ public class WaveSpawner : MonoBehaviour
     {
         if(spawnTimer <=0)
         {
-            if(enemiesToSpawn.Count >0)
+            if (enemiesToSpawn.Count > 0)
             {
-                Instantiate(enemiesToSpawn[0], spawnLocation.position,Quaternion.identity);
+                GameObject enemyToSpawn = enemiesToSpawn[0];
                 enemiesToSpawn.RemoveAt(0);
+                Instantiate(enemyToSpawn, spawnLocation.position, Quaternion.identity);
                 spawnTimer = spawnInterval;
+                Debug.Log("Spawning enemy: " + enemiesToSpawn[0].name);
             }
             else
             {
@@ -47,11 +49,19 @@ public class WaveSpawner : MonoBehaviour
 
     public void GenerateWave()
     {
-        waveValue = currWave * 10;
+        waveValue = Mathf.Max(currWave * 10, 1);
         GenerateEnemies();
 
         spawnInterval = waveDuration / enemiesToSpawn.Count;
         waveTimer = waveDuration;
+
+        Debug.Log("Generated enemies: " + enemiesToSpawn.Count);
+
+        if (enemiesToSpawn.Count == 0)
+        {
+            Debug.LogWarning("No enemies generated nigga!!!!");
+            return;    
+        }
     }
 
     public void GenerateEnemies()
