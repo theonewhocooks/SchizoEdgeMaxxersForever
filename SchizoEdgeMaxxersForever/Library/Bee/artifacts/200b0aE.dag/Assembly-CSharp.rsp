@@ -369,6 +369,7 @@
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/Musicthing.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/restartgame.cs"
 "Assets/Scripts/startgame.cs"
 "Assets/Scripts/WaveSpawner.cs"
 "Assets/UnityTechnologies/EffectExamples/Shared/Scripts/DecalDestroyer.cs"

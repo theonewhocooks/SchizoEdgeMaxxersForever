@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+	public GameObject restartButton;
 	public Transform effectPoint;
 	public GameObject bloodEffect1, bloodEffect2;
 	private int damage = 5;
@@ -100,7 +101,11 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage()
     {
         health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyPlayer), .5f);
+		if (health <= 0)
+		{
+			restartButton.SetActive(true);
+			Invoke(nameof(DestroyPlayer), .5f);
+		} 
 		bloodEffect1.SetActive(true);
 		bloodEffect2.SetActive(true);
 		StartCoroutine(WoundEffect());

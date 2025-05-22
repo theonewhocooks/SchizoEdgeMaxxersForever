@@ -12,6 +12,8 @@ public class GunSystem : MonoBehaviour
 
     public AudioClip gunshotAudioClip;
 
+    public AudioClip reloadAudioClip;
+
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
@@ -56,6 +58,7 @@ public class GunSystem : MonoBehaviour
     {
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
+        audioSource.PlayOneShot(reloadAudioClip, 2);
     }
 
     private void Shoot()

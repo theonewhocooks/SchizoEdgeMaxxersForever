@@ -6307,7 +6307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 3
-  health: 50
+  health: 10
   player: {fileID: 0}
 --- !u!195 &2980591814397366440
 NavMeshAgent:

@@ -2,20 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "com.unity.animations.springbone": "1.0.0",
-          "com.unity.animations.springbone.editor": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Assembly-CSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Assembly-CSharp.dll": {}
-        }
-      },
       "com.unity.animations.springbone/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -42,11 +28,6 @@
     }
   },
   "libraries": {
-    "Assembly-CSharp/1.0.0": {
-      "type": "project",
-      "path": "Assembly-CSharp.csproj",
-      "msbuildProject": "Assembly-CSharp.csproj"
-    },
     "com.unity.animations.springbone/1.0.0": {
       "type": "project",
       "path": "com.unity.animations.springbone.csproj",
@@ -60,7 +41,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "Assembly-CSharp >= 1.0.0",
       "com.unity.animations.springbone >= 1.0.0",
       "com.unity.animations.springbone.editor >= 1.0.0"
     ]
@@ -71,9 +51,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/Assembly-CSharp-Editor.csproj",
-      "projectName": "Assembly-CSharp-Editor",
-      "projectPath": "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/Assembly-CSharp-Editor.csproj",
+      "projectUniqueName": "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/Assembly-CSharp.csproj",
+      "projectName": "Assembly-CSharp",
+      "projectPath": "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/Assembly-CSharp.csproj",
       "packagesPath": "/Users/davidneff469/.nuget/packages/",
       "outputPath": "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/obj/",
       "projectStyle": "PackageReference",
@@ -90,9 +70,6 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/Assembly-CSharp.csproj": {
-              "projectPath": "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/Assembly-CSharp.csproj"
-            },
             "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/com.unity.animations.springbone.csproj": {
               "projectPath": "/Users/davidneff469/Documents/GitHub/SchizoEdgeMaxxersForever/SchizoEdgeMaxxersForever/com.unity.animations.springbone.csproj"
             },

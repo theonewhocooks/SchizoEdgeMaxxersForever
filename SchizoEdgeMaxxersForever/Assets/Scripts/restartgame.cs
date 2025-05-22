@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class startgame : MonoBehaviour
+public class restartgame : MonoBehaviour
 {
-    [SerializeField] private string maingame = "Main Game";
-    public GameObject settings;
-    public GameObject menu;
-    public GameObject closebutton;
+    [SerializeField] private string maingame = "Mainmenu";
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +18,9 @@ public class startgame : MonoBehaviour
         
     }
 
-    public void StartGameButton()
+    public void restartGameButton()
     {
-        SceneManager.LoadScene("Main Game");
+        SceneManager.LoadScene("Mainmenu");
     }
     
 }

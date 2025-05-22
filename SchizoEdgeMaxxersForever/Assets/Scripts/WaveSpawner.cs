@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class WaveSpawner : MonoBehaviour
@@ -28,12 +29,23 @@ public class WaveSpawner : MonoBehaviour
     private float waveCooldownTimer = 5f;
     private bool waveInProgress = false;
 
+    public GameObject victoryScreen;
+
+    public GameObject restartButton;
+
     void Start()
     {
         currWave = 0;
         GenerateWave();
     }
 
+    void Update()
+    {
+        if (currWave >= 6 && GameObject.FindObjectsOfType<EnemyAi>().Length == 0)
+        {
+            ShowVictoryScreen();
+        }
+    }
     void FixedUpdate()
     {
         if (waveInProgress)
@@ -76,7 +88,7 @@ public class WaveSpawner : MonoBehaviour
         if (waveText != null)
             waveText.text = "Wave " + currWave;
 
-        waveValue = Mathf.Max(currWave * 13, 1);
+        waveValue = Mathf.Max(currWave * 5, 1);
         GenerateEnemies();
 
         if (enemiesToSpawn.Count == 0)
@@ -109,5 +121,12 @@ public class WaveSpawner : MonoBehaviour
 
         enemiesToSpawn.Clear();
         enemiesToSpawn = generatedEnemies;
+    }
+
+    void ShowVictoryScreen()
+    {
+        victoryScreen.SetActive(true);
+        Time.timeScale = 0f; // pause the game
+        restartButton.SetActive(true);
     }
 }

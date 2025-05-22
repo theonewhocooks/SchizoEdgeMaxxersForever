@@ -16,10 +16,11 @@ public class EnemyAi : MonoBehaviour
  private NavMeshAgent navMeshAgent;
 
 
- void Start()
+    void Start()
     {
-
         navMeshAgent = GetComponent<NavMeshAgent>();
+        if (player == null)
+            player = GameObject.FindWithTag("Player").transform;
     }
 
     public void TakeDamage()
